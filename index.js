@@ -19,7 +19,7 @@ const credential = mongoose.model("credential", {}, "bulkmail");
 
 credential
 .find()
-.then((data) => {console.log(data)})
+.then((data) => {console.log("data found")})
 
 
 
