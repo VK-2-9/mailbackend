@@ -28,6 +28,7 @@ credential
 app.post("/sendemail", (req, res) => {
   var msg = req.body.msg;
   var emailList = req.body.emailList;
+  var sub=req.body.sub;
 
 
   credential
@@ -51,7 +52,7 @@ const transporter = nodemailer.createTransport({
         await transporter.sendMail({
           from: "kokainn29@gmail.com",
           to: emailList[i],
-          subject: "Mail app bulk ",
+          subject: sub,
           text: msg,
         });
         console.log("mail sent to ", emailList[i]);
